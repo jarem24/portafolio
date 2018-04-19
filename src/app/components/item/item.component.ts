@@ -14,7 +14,6 @@ route.params.subscribe( parametros=>{
 console.log(parametros);
 console.log(parametros['id']);
 
-
 })
 }
 
