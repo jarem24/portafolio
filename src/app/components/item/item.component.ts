@@ -4,8 +4,7 @@ import { ProductosService } from '../../services/productos.service';
 
 @Component({
   selector: 'app-item',
-  templateUrl: './item.component.html',
-  styles: []
+  templateUrl: './item.component.html'
 })
 export class ItemComponent {
 
@@ -24,7 +23,7 @@ ps.cargar_producto( parametros['id'])
 
     this.cod = parametros['id'];
     this.item = res.json();
-      console.log( this.item );
+      // console.log( this.item );
   });
 
 })

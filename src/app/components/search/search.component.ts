@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InformacionService } from '../../services/informacion.service';
+import { ProductosService } from '../../services/productos.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,6 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 
 export class SearchComponent  {
 
-  constructor() { }
+termino: string = undefined;
+
+  constructor(private route: ActivatedRoute,
+              private ps: ProductosService) {
+    route.params.subscribe( parametros=>{
+
+      this.termino = parametros['termino'];
+      console.log(this.termino);
+      ps.buscar_producto(this.termino);
+    });
+   }
 
 }
