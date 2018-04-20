@@ -25,7 +25,7 @@
     <h6>Por favor espere...</h6>
 </div>
 
-    <div  *ngIf="ps.productos.length >0 && !cargando"
+    <div  *ngIf="ps.productos.length >0 && !ps.cargando"
           class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn">
       <a *ngFor="let producto of ps.productos"
            [routerLink]="['/item', producto.cod]"
